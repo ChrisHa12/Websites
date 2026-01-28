@@ -1,7 +1,9 @@
 <html>
+
+
     <head>
         <meta charset="utf-8">
-        <link rel="icon" href="pix/ico/favicon.ico">
+        <!--<link rel="icon" href="pix/ico/favicon.ico">-->
         
         <script src="https://aframe.io/release/1.7.1/aframe.min.js"></script>
         <title>A-Frame Starter</title>
@@ -9,9 +11,9 @@
 </html>
 <body>
     <a-scene>
-        <a-assets>
+        <!--<a-assets>
             <img id=""logo" src="pix/IAM_logo.png">
-        </a-assets>
+        </a-assets>-->
         <a-entity
         geometry="primitive: box"
         material="color: #4cc3D9"
@@ -46,12 +48,19 @@
         </a-entity>
 
         <a-entity 
-        geometry="primitive: icosahedron; radius 0.3" 
+        geometry="primitive: octohedron; radius 0.3" 
         position="0 3.5 -5" 
         rotation="0 0 0"
         material="color: green; src:#logo; repeat 4.1"
         animation_rotation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear" 
         animation_pos="property: position; to : 0 4 -5; dir: alternate; loop: true; easing: easeInOutSine; dur: 2000 ">
+        </a-entity>
+
+         <a-entity
+        geometry="primitive: cylinder; radius: 0.3; height: 2"
+        material="color: darkslategray"
+        position="1 0.75 -3"
+        animation_rotation="property: rotation; to: 0 360 0; loop: true; dur: 1000; easing: linear"> 
         </a-entity>
 
         <a-sky color="#FF8D31"></a-sky>
