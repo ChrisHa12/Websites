@@ -13,7 +13,7 @@
             <img id="logo" src="pix/IAM_logo.png">
       </a-assets>
 
-      <a-entity light="type: spot; position 0 0 10; angle 90"></a-entity>
+      <!--a-entity light="types: spot; position 0 0 0; angle 0"></a-entity-->
 
       <a-entity 
       geometry="primitive: plane; width: 12; height: 12" 
@@ -30,9 +30,9 @@
       animation__rot="property: rotation; to: 0 0 0; loop: true; dur: 4000; easing: linear">
     
       <a-entity
-      geometry="primitive: box; height: 3"
+      geometry="primitive: box; width: 1.1; height: 3; depth: 1.1"
       material="color: darkslategray"
-      position="0 2d 0"
+      position="0 2 0"
       animation__rot="property: rotation; to: 0 0 0; loop: true; dur: 1000; easing: linear"> 
 
       <a-entity
@@ -44,40 +44,40 @@
        <a-entity
       geometry="primitive: torus; radius: 3"
       material="color: white"
-      position="0 0.3 1"
+      position="0 0.7 1"
       animation__rot="property: rotation; to: 0 0 0; loop: true; dur: 1000; easing: linear">
 
       <a-entity
-      geometry="primitive: box; width:1.5"
-      material="color: black"
+      geometry="primitive: box; width: 1.5; depth: 0.9"
+      material="color: white"
       position="0 0 0"
       animation__rot="property: rotation; to: 0 0 360; loop: true; dur: 1000; easing: linear"> 
             
       <a-entity
-      geometry="primitive: box; height: 2; width: 1.5"
-      material="color: blue"
+      geometry="primitive: box; height: 2; width: 1.5; depth: 0.9"
+      material="color: white"
       position="0 1.5 0"
       rotation="0 0 0"
       animation__rot="property: rotation; to: 0 0 0; loop: true; dur: 1000; easing: linear"> 
        
       <a-entity
-      geometry="primitive: box; height: 2; width: 1.5"
-      material="color: blue"
+      geometry="primitive: box; height: 2; width: 1.5; depth: 0.9"
+      material="color: white"
       position="0 -3 0"
       rotation="0 0 0"
       animation__rot="property: rotation; to: 0 0 0; loop: true; dur: 1000; easing: linear"> 
       </a-entity>
 
       <a-entity
-      geometry="primitive: box; height: 2; width: 1.5"
-      material="color: blue"
+      geometry="primitive: box; height: 2; width: 1.5; depth: 0.9"
+      material="color: white"
       position="1.6 -1.5 0"
       rotation="0 0 90"
       animation__rot="property: rotation; to: 0 0 90; loop: true; dur: 1000; easing: linear"> 
 
       <a-entity
-      geometry="primitive: box; height: 2; width: 1.5"
-      material="color: blue"
+      geometry="primitive: box; height: 2; width: 1.5; depth: 0.9"
+      material="color: white"
       position="0 3.3 0"
       rotation="0 0 0"
       animation__rot="property: rotation; to: 0 0 0; loop: true; dur: 1000; easing: linear"> 
