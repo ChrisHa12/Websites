@@ -4,13 +4,14 @@
     <link rel="icon" href="pix/ico/favicon.ico">
 
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
-    <title>A-Frame Starter</title>
+    <title>Fan on a Desk</title>
 
   </head>
   <body>
     <a-scene>
       <a-assets>
-            <img id="logo" src="pix/IAM_logo.png">
+            <img id="plastic" src="worn-old-plastic_albedo.png">
+            <img id="plasticNorm" src="worn-old-plastic-normal-ogl.png">
       </a-assets>
 
       <!--a-entity light="types: spot; position 0 0 0; angle 0"></a-entity-->
@@ -19,6 +20,13 @@
       geometry="primitive: box; width: 24; height: 12" 
       material="color: #876E4B" 
       position="0 0 -4"
+      rotation="-90 0 0">
+      </a-entity>
+
+      <a-entity
+      geometry="primitive: plane; height: 8; width: 5"
+      material="color: #00000"
+      position="7 0.6 -3.5"
       rotation="-90 0 0">
       </a-entity>
 
@@ -48,14 +56,14 @@
 
       <a-entity 
       geometry="primitive: box; width: 3; height: 1; depth: 3" 
-      position="0 0.75 -5" 
+      position="-7 1 -6" 
       rotation="0 0 0"
-      material="color: gray"
+      material="src:#plastic; normalMap:#plasticNorm; normalScale: 2 2 ; 4 4"
       animation__rot="property: rotation; to: 0 0 0; loop: true; dur: 4000; easing: linear">
     
       <a-entity
       geometry="primitive: box; width: 1.1; height: 3; depth: 1.1"
-      material="color: darkslategray"
+      material="src:#plastic; normalMap:#plasticNorm; normalScale: 2 2 ; 4 4"
       position="0 2 0"
       animation__rot="property: rotation; to: 0 0 0; loop: true; dur: 1000; easing: linear"> 
 
@@ -76,6 +84,7 @@
       geometry="primitive: box; width: 1.5; depth: 0.9"
       material="color: white"
       position="0 0 0"
+      sound="src: url(freesound_community-my-room-and-its-noisy-fan-27352.mp3); autoplay:true; loop: true "
       animation__rot="property: rotation; to: 0 0 360; loop: true; dur: 1000; easing: linear"> 
             
       <a-entity
@@ -107,13 +116,26 @@
       rotation="0 0 0"
       animation__rot="property: rotation; to: 0 0 0; loop: true; dur: 1000; easing: linear"> 
       </a-entity>
-
+      </a-entity>      
+      </a-entity>
+      </a-entity>
+      </a-entity>
+      </a-entity>
+      </a-entity>
+      </a-entity>
+      </a-entity>
+      <a-entity
+      geometry="primitive:cone; radiusBottom: 4; height: 4; radiusTop"
+      position="0 20 -5"
+      material="color: #D6B588">
+      <a-entity
+      geometry="primitive: sphere; radius: 3"
+      material="emissive: #FDAE44; emissiveIntensity: 3"
+      position="0 0 0">
       </a-entity>
 
-      
-      </a-entity>
 
-      <a-sky color="#898989"></a-sky>
+      <a-sky color="#00000"></a-sky>
     </a-scene>
   </body>
 </html>
