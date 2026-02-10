@@ -14,6 +14,10 @@
             <img id="plasticNorm" src="worn-old-plastic-normal-ogl.png">
       </a-assets>
 
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+
       <a-entity 
       geometry="primitive: box; width: 24; height: 12" 
       material="color: #876E4B" 
@@ -70,7 +74,9 @@
       material="color: white"
       position="0 3.5 0"
       rotation="0 -60 0"
-      animation__rot="property: rotation; to: 0 60 0; loop: true; dur: 3000; dir: alternate; easing: linear">
+      animation__mouseenter="property: rotation; to: 0 -60 0; loop: true; dur: 3000; dir: alternate; easing: linear; startEvents: mouseenter"
+      animation__mouseleave="property: rotation; to: 0 60 0; loop: true; dur: 3000; dir: alternate; easing: linear; startEvents: mouseleave"
+      animation__customevent="property: rotation; from: 0 -60 0; to: 0 60 0; loop: true; dur: 3000; dir: alternate; easing: linear; startEvents: triggeranimation">
       
       <a-entity
       geometry="primitive: torus; radius: 3"
@@ -82,8 +88,8 @@
       geometry="primitive: box; width: 1.5; depth: 0.9"
       material="color: white"
       position="0 0 0"
-      sound="src: url(freesound_community-my-room-and-its-noisy-fan-27352.mp3); autoplay:true; loop: true "
-      animation__rot="property: rotation; to: 0 0 360; loop: true; dur: 1000; easing: linear"> 
+      sound="src: url(freesound_community-my-room-and-its-noisy-fan-27352.mp3); autoplay:false; loop: true; on: click"
+      animation__rot="property: rotation; from: 0 0 0; to: 0 0 360; loop: true; dur: 1000; easing: linear; playSound; startEvents: click;"> 
             
       <a-entity
       geometry="primitive: box; height: 2; width: 1.5; depth: 0.9"
